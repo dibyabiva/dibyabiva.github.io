@@ -19,8 +19,11 @@
       {
         border: 1px solid black;
         padding: 5px;
-        font-size: 30px;
       }
+	    .big-text
+			{
+				font-size: 25px;
+			}
     </style>
   </head>
   <body>
@@ -30,14 +33,14 @@
       <table style="width: 96%; margin: 2%; border: 1px solid black;">
         <thead>
           <tr>
-            <th style="width: 80%;" class="text-center">Item</th>
-            <th style="width: 20%;" class="text-center">Value</th>
+            <th style="width: 80%;" class="text-center big-text">Item</th>
+            <th style="width: 20%;" class="text-center big-text">Value</th>
           </tr>
         </thead>
         <tbody id="content-tbody">
         </tbody>
       </table>
-      <input id="send-button" type="button" class="btn btn-success" value="Send" style="font-size: 30px;"/>
+      <input id="send-button" type="button" class="btn btn-success big-text" value="Send"/>
       <br/><br/><br/>
     </div>
     <script>
@@ -48,8 +51,8 @@
         for(let i = 0; i < number_of_items; i++)
         {
           tbody_data += "<tr>";
-          tbody_data += "<td>" + items[i] + "</td>";
-          tbody_data += "<td><input style='width: 100%;' type='text' id='item-" + i + "'/></td>";
+          tbody_data += "<td class='big-text'>" + items[i] + "</td>";
+          tbody_data += "<td class='big-text'><input style='width: 100%;' type='text' id='item-" + i + "'/></td>";
           tbody_data += "</tr>";
         }
         $("#content-tbody").html(tbody_data);
