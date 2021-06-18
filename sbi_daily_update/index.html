@@ -29,7 +29,7 @@
   <body>
     <div class="col-md-12 text-center">
       <br/>
-      <h1>Daily Update</h1>
+      <h1 id="page-header"></h1>
       <table style="width: 96%; margin: 2%; border: 1px solid black;">
         <thead>
           <tr>
@@ -44,6 +44,7 @@
       <br/><br/><br/>
     </div>
     <script>
+			let branch_name = "Simurali";
       let items = ["KYC UPDATION", "BENEFICIAL OWNER", "DISCREPANT AOF", "PAN/FORM 60 UPDATION", "SPL KYC AUDIT", "PAN DIVERGENCE", "DEDUPLIPICATION", "KYC NON COMPLIANT UPDATION", "PRE LCPC MOBILISE", "PRE LCPC CLOSE", "PPS REGISTRATION", "OVVR ZEROISED"];
       let number_of_items = items.length;
       $(document).ready(function() {
@@ -56,6 +57,7 @@
           tbody_data += "</tr>";
         }
         $("#content-tbody").html(tbody_data);
+				$("#page-header").html(branch_name + " Daily Update");
       });
       $("#send-button").click(function(){
         let whatsapp_data = "";
@@ -63,7 +65,7 @@
         {
           whatsapp_data += items[i] + "- " + $("#item-" + i).val() + "\n";
         }
-        whatsapp_data += "\nRegards,\nSimurali Branch";
+        whatsapp_data += "\nRegards,\n" + branch_name + " Branch";
         window.location.href = "whatsapp://send?text=" + encodeURI(whatsapp_data);
       });
     </script>
