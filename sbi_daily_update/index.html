@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SBI Daily Update</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta property="og:image" content="/og_image.png">
+		<meta property="og:title" content="SBI Daily Update" >
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="Expires" content="0"/>
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+      th, td
+      {
+        border: 1px solid black;
+        padding: 5px;
+        font-size: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="col-md-12 text-center">
+      <br/>
+      <h1>Daily Update</h1>
+      <table style="width: 96%; margin: 2%; border: 1px solid black;">
+        <thead>
+          <tr>
+            <th style="width: 80%;" class="text-center">Item</th>
+            <th style="width: 20%;" class="text-center">Value</th>
+          </tr>
+        </thead>
+        <tbody id="content-tbody">
+        </tbody>
+      </table>
+      <input id="send-button" type="button" class="btn btn-success" value="Send" style="font-size: 35px;"/>
+      <br/><br/><br/>
+    </div>
+    <script>
+      let items = ["KYC UPDATION", "BENEFICIAL OWNER", "DISCREPANT AOF", "PAN/FORM 60 UPDATION", "SPL KYC AUDIT", "PAN DIVERGENCE", "DEDUPLIPICATION", "KYC NON COMPLIANT UPDATION", "PRE LCPC MOBILISE", "PRE LCPC CLOSE", "PPS REGISTRATION", "OVVR ZEROISED"];
+      let number_of_items = items.length;
+      $(document).ready(function() {
+        let tbody_data = "";
+        for(let i = 0; i < number_of_items; i++)
+        {
+          tbody_data += "<tr>";
+          tbody_data += "<td>" + items[i] + "</td>";
+          tbody_data += "<td><input style='width: 100%;' type='text' id='item-" + i + "'/></td>";
+          tbody_data += "</tr>";
+        }
+        $("#content-tbody").html(tbody_data);
+      });
+      $("#send-button").click(function(){
+        let whatsapp_data = "";
+        for(let i = 0; i < number_of_items; i++)
+        {
+          whatsapp_data += items[i] + "- " + $("#item-" + i).val() + "\n";
+        }
+        whatsapp_data += "\nRegards,\nSimurali Branch";
+        window.location.href = "whatsapp://send?text=" + encodeURI(whatsapp_data);
+      });
+    </script>
+  </body>
+</html>
