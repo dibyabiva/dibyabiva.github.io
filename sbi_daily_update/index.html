@@ -61,18 +61,17 @@
         {
           tbody_data += "<tr>";
           tbody_data += "<td class='big-text' style='text-align: left;'>" + items[i].replaceAll(" ","&nbsp;") + "</td>";
-          if(dummy_indices.includes(i)) //hide input field
-          {
-            tbody_data += "<td class='big-text'><input style='width: 100%; display:none;' type='text' id='item-" + i + "'/></td>";
-          }
-          else
-          {
-            tbody_data += "<td class='big-text'><input style='width: 100%;' type='text' id='item-" + i + "'/></td>";
-          }
+          tbody_data += "<td class='big-text'><input style='width: 100%;' type='text' id='item-" + i + "'/></td>";
           tbody_data += "</tr>";
         }
         $("#content-tbody").html(tbody_data);
         $("#page-header").html(branch_name + " Daily Update");
+        // hide dummy input fields
+        for(let x = 0; x < dummy_indices.length; x++)
+        {
+          let index = dummy_indices[x];
+          $("#item-" + index).css("display", "none");
+        }
       });
       $("#send-button").click(function(){
         let whatsapp_data = "BR - " + branch_name + " Br\n";
