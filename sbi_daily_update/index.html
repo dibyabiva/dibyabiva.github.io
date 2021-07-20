@@ -30,6 +30,9 @@
     <div class="col-md-12 text-center">
       <br/>
       <h1 id="page-header"></h1>
+      <span>
+        Date: <input id="date-string" type="text"/>
+      </span>
       <table style="width: 96%; margin: 2%; border: 1px solid black;">
         <thead>
           <tr>
@@ -45,27 +48,40 @@
     </div>
     <script>
       let branch_name = "Mahisgote";
-      let items = ["KYC UPDATION", "BENEFICIAL OWNER", "DISCREPANT AOF", "PAN/FORM 60 UPDATION", "SPL KYC AUDIT", "PAN DIVERGENCE", "DEDUPLIPICATION", "KYC NON COMPLIANT UPDATION", "PRE LCPC MOBILISE", "PRE LCPC CLOSE", "PPS REGISTRATION", "OVVR ZEROISED"];
+      let date = new Date();
+      let date_string = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+      $("#date-string").val(date_string);
+      let items = ["A)", "1. SB A/C - ", "    Normal - ", "    Vkyc - ", "2. CA - ", "    Online - ", "    Normal - ", "3. PPF - ", "4. SSA - ", "5. YONO - ", "6. NFS - ", "7. CINB - ", "8. RINB - ", "9. DSB - ", "10. PPS - ", " ", "B)", "1. KYC - ", "2. Pre-Lcpc - ", "3. Post-Lcpc - ", "4. Discrepant - ", "5. PMSBY - ", "6. PMJJBY - ", "7. APY - ", "8. NPS - ", " ", "C)", "1. c-KYC position - ", "2. VVR Position - ", "3. BGL position - ", "4. Radar rectification - ", "5. EDAC - ", "6. Data quality Index - ", "7. CMS - ", "8. Dedup - ", "9. Beneficial Owner - "];
+
+      let dummy_indices = [0, 1, 4, 15, 16, 25, 26];
       let number_of_items = items.length;
       $(document).ready(function() {
         let tbody_data = "";
         for(let i = 0; i < number_of_items; i++)
         {
           tbody_data += "<tr>";
-          tbody_data += "<td class='big-text' style='text-align: left;'>" + items[i] + "</td>";
-          tbody_data += "<td class='big-text'><input style='width: 100%;' type='text' id='item-" + i + "'/></td>";
+          tbody_data += "<td class='big-text' style='text-align: left;'>" + items[i].replaceAll(" ","&nbsp;") + "</td>";
+          if(dummy_indices.includes(i)) //hide input field
+          {
+            tbody_data += "<td class='big-text'><input style='width: 100%; display:none;' type='text' id='item-" + i + "'/></td>";
+          }
+          else
+          {
+            tbody_data += "<td class='big-text'><input style='width: 100%;' type='text' id='item-" + i + "'/></td>";
+          }
           tbody_data += "</tr>";
         }
         $("#content-tbody").html(tbody_data);
         $("#page-header").html(branch_name + " Daily Update");
       });
       $("#send-button").click(function(){
-        let whatsapp_data = "";
+        let whatsapp_data = "BR - " + branch_name + " Br\n";
+        whatsapp_data += "DATE - " + $("#date-string").val() + "\n\n";
         for(let i = 0; i < number_of_items; i++)
         {
-          whatsapp_data += items[i] + "- " + $("#item-" + i).val() + "\n";
+          whatsapp_data += items[i] + $("#item-" + i).val() + "\n";
         }
-        whatsapp_data += "\nRegards,\n" + branch_name + " Branch";
+        // console.log(whatsapp_data);
         window.location.href = "whatsapp://send?text=" + encodeURI(whatsapp_data);
       });
     </script>
