@@ -30,7 +30,8 @@
         <div id="upload_div" class="container" >
             <div class="col-md-12 text-center">
                 <h1>Webpage And Resume Maker</h1>
-                <br>
+                <span style="font-style: italic;">Source Code: <a href="https://github.com/dibyabiva/dibyabiva.github.io" target="_blank">https://github.com/dibyabiva/dibyabiva.github.io</a></span>
+                <br><br>
                 <h5>Upload a JSON File, based on the <a style="color: var(--accent-color);" href="/resume.json" target="_blank">sample given here</a>.</h5>
                 <input id="file_input" type="file" style="border: 2px solid #fff; border-radius: 8px; cursor: pointer;"><span id="file_error" style="color: red; display: none;"> Invalid File!!!</span>
                 <br><br>
@@ -88,6 +89,7 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h6 id="copyright"></h6>
+                    <span style="font-style: italic;">Built using: <a href="https://github.com/dibyabiva/dibyabiva.github.io" target="_blank">https://github.com/dibyabiva/dibyabiva.github.io</a></span>
                 </div>
             </div>
         </div>
@@ -127,11 +129,6 @@
                 }
                 
             });
-
-            // $.get("/resume.json", data => {
-            //     resume_json = data;
-            //     make_website(resume_json);
-            // });
 
             $("#download_button").click(() => {
                 make_pdf(resume_json);
