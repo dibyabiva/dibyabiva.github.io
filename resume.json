@@ -1,0 +1,150 @@
+{
+    "name": "Dibyabiva Seth",
+    "job_title": "Senior Software Engineer | Full-Stack Developer | Avid Coder",
+    "phone_numbers": 
+        [],
+    "emails": 
+        [
+            "dibyabivaseth@gmail.com"
+        ],
+    "location": "Kolkata, India",
+    "websites": 
+        [
+            "https://dibyabiva.github.io"
+        ],
+    "social_links":
+        [
+            {
+                "site": "LinkedIn",
+                "url": "https://www.linkedin.com/in/dibyabiva-seth-00b72511b"
+            },
+            {
+                "site": "ResearchGate",
+                "url": "https://www.researchgate.net/profile/Dibyabiva_Seth"
+            }
+        ],
+    "skills": 
+        {
+            "advanced": 
+                [
+                    "Python", "Flask", "OpenCV", "Open3D", "NumPy", "HTML", "CSS", "Bootstrap", "JavaScript", "jQuery", "PDFKit", "Three.js", "Selenium", "Git", "WebSocket", "MySQL", "MongoDB", "Linux"
+                ],
+            "moderate": 
+                [
+                    "Django", "PyTorch", "YOLOv5", "Ruby", "Ruby On Rails", "S3"
+                ],
+            "basic": 
+                [
+                    "C", "C++", "Java", "MATLAB", "Pandas", "Docker"
+                ]
+        },
+    "experiences": 
+        [
+            {
+                "company": "Cayster Inc.",
+                "location": "New York City (Remote)",
+                "designation": "Senior Software Engineer",
+                "start_date": "May 2022",
+                "end_date": "September 2024",
+                "experience_highlights": 
+                    [
+                        {
+                            "task": "Single-handedly created an end-to-end custom AI annotation and training platform. This is a custom in-browser annotation platform where the annotators have specialized tools to annotate and review their work. The platform automatically assigns users, tracks their progress, automatically retrains the model with new data, and sends out the training report.",
+                            "tech_used": "Python, Flask, OpenCV, Open3D, MongoDB, YOLOv5, HTML, CSS, JavaScript, jQuery, Annotorious and Three.js."
+                        },
+                        {
+                            "task": "Helped in integrating intra-oral scanners with Cayster’s web platform, helping doctors to scan patients from inside the browser itself. The real-time scan is also simultaneously streamed directly to the lab for review and adjustments. The lab has the ability to annotate problematic areas and give instant feedback to the doctor.",
+                            "tech_used": "Python, Flask, HTML, CSS, JavaScript, jQuery, Annotorious and WebSocket."
+                        },
+                        {
+                            "task": "Single-handedly created a support agent tool using Python that would be installed in a doctor’s laptop. The agent tracks the intra-oral scanner activities and automatically reaches out to the support team in-case of problems faced by the doctor.",
+                            "tech_used": "Python and Tesseract OCR."
+                        }
+
+                    ]
+            },
+            {
+                "company": "TurnToTech",
+                "location": "New York City (Remote)",
+                "designation": "Software Engineer",
+                "start_date": "June 2016",
+                "end_date": "March 2022",
+                "experience_highlights": 
+                    [
+                        {
+                            "task": "Single-handedly created an in-house automatic assessment evaluation system. The system automatically fetches a candidate’s repo from GitHub and evaluates it based on certain hidden test cases.",
+                            "tech_used": "Python, Flask, GitHub, Selenium, RabbitMQ and Docker."
+                        },
+                        {
+                            "task": "Helped in creating a candidate hiring platform called JustCode.",
+                            "tech_used": "Ruby On Rails, MySQL, HTML, CSS, JavaScript and jQuery."
+                        },
+                        {
+                            "task": "Helped in creating an MCQ evaluation system for Kontra, as a collaboration between ThriveDX and JustCode.",
+                            "tech_used": "Ruby On Rails, MySQL, HTML, CSS, JavaScript and jQuery."
+                        },
+                        {
+                            "task": "Created study materials for courses.",
+                            "tech_used": "Python and Java."
+                        }
+
+                    ]
+            }
+        ],
+    "educational_qualifications": 
+        [
+            {
+                "organization": "St. Xavier’s College(Autonomous), Kolkata",
+                "degree": "M.Sc. in Computer Science",
+                "year_range": "2014 - 2016",
+                "score": "9.03 CGPA",
+                "achievement": ""
+            },
+            {
+                "organization": "St. Xavier’s College(Autonomous), Kolkata",
+                "degree": "B.Sc. in Computer Science",
+                "year_range": "2011 - 2014",
+                "score": "8.18 CGPA",
+                "achievement": "Achieved the award for the best Project Work in Computer Science of 2013 - 2014."
+            }
+        ],
+    "research_papers": 
+        [
+            {
+                "title": "Real Time Sign Language to Braille Interfacing System",
+                "date": "November 2017",
+                "location": "7th International Conference on Communication Systems and Network Technologies (CSNT)",
+                "link": "https://ieeexplore.ieee.org/document/8418569"
+            },
+            {
+                "title": "Real Time Sign Language Processing System",
+                "date": "August 2016",
+                "location": "International Conference on Smart Trends for Information Technology and Computer Communications",
+                "link": "https://link.springer.com/chapter/10.1007/978-981-10-3433-6_2"
+            },
+            {
+                "title": "A ‘Mixed’ Approach to Group Formation in Collaborative Learning",
+                "date": "October 2015",
+                "location": "Smart Computing Review",
+                "link": "https://www.researchgate.net/publication/283754278_A_%27Mixed%27_Approach_to_Group_Formation_in_Collaborative_Learning"
+            },
+            {
+                "title": "A New Approach to Collaborative Group Formation",
+                "date": "October 2015",
+                "location": "International Journal of Computer Applications",
+                "link": "https://www.ijcaonline.org/archives/volume128/number3/22851-2015906462"
+            },
+            {
+                "title": "Traffic Rule Violation Information System (TRuVIS)",
+                "date": "July 2015",
+                "location": "International Journal of Advanced Research in Computer Science and Software Engineering",
+                "link": "https://www.researchgate.net/publication/323958948_Traffic_Rule_Violation_Information_System_TRuVIS"
+            },
+            {
+                "title": "Hand Gesture Recognition Library",
+                "date": "March 2014",
+                "location": "International Journal of Science and Applied Information Technology",
+                "link": "https://www.researchgate.net/publication/280243200_Hand_Gesture_Recognition_Library"
+            }
+        ]
+}
